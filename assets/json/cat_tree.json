@@ -1,0 +1,210 @@
+[
+  {
+    "ID": 1,
+    "Parent ID": null,
+    "Title": "All Categories",
+    "Key": "all_categories",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 2,
+    "Parent ID": 1,
+    "Title": "Abrasives",
+    "Key": "abrasives",
+    "Folder": "FALSE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 3,
+    "Parent ID": 1,
+    "Title": "Adhesives & Sealants",
+    "Key": "adhesives_&_sealants",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 3,
+    "Parent ID": 1,
+    "Title": "Adhesives & Sealants",
+    "Key": "adhesives_&_sealants",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 4,
+    "Parent ID": 1,
+    "Title": "Cable Ties",
+    "Key": "cable_ties",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 5,
+    "Parent ID": 1,
+    "Title": "Chemicals",
+    "Key": "chemicals",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 6,
+    "Parent ID": 1,
+    "Title": "Cutting & Drilling",
+    "Key": "cutting_&_drilling",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 7,
+    "Parent ID": 1,
+    "Title": "Electrical ",
+    "Key": "electrical",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 8,
+    "Parent ID": 1,
+    "Title": "Fasteners",
+    "Key": "fasteners",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": "anchors",
+    "Parent ID": 8,
+    "Title": "Anchors",
+    "Key": "anchors",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": "facs",
+    "Parent ID": "anchors",
+    "Title": "Concrete Screws",
+    "Key": "concrete_screws",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": "facshhmg",
+    "Parent ID": "facs",
+    "Title": "HD Hex Head Mechanically Galvanized",
+    "Key": "hd_hex_head_mechanically_galvanized",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": "facshhhz",
+    "Parent ID": "facs",
+    "Title": "HD Hex Head Zinc",
+    "Key": "hd_hex_head_zinc",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": "facpa",
+    "Parent ID": "anchors",
+    "Title": "Conical Plastic Anchors",
+    "Key": "conical_plastic_anchors",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 9,
+    "Parent ID": 1,
+    "Title": "Fittings",
+    "Key": "fittings",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 10,
+    "Parent ID": 1,
+    "Title": "Hand Tools",
+    "Key": "hand_tools",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 11,
+    "Parent ID": 1,
+    "Title": "Hose Clamps",
+    "Key": "hose_clamps",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 12,
+    "Parent ID": 1,
+    "Title": "Janitorial",
+    "Key": "janitorial",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 13,
+    "Parent ID": 1,
+    "Title": "Material Handling",
+    "Key": "material_handling",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 14,
+    "Parent ID": 1,
+    "Title": "O Rings",
+    "Key": "o_rings",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 15,
+    "Parent ID": 1,
+    "Title": "Office Supplies",
+    "Key": "office_supplies",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 16,
+    "Parent ID": 1,
+    "Title": "Paint",
+    "Key": "paint",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 17,
+    "Parent ID": 1,
+    "Title": "Power Tools",
+    "Key": "power_tools",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 18,
+    "Parent ID": 1,
+    "Title": "Safety",
+    "Key": "safety",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 19,
+    "Parent ID": 1,
+    "Title": "Tape",
+    "Key": "tape",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  },
+  {
+    "ID": 20,
+    "Parent ID": 1,
+    "Title": "Welding",
+    "Key": "welding",
+    "Folder": "TRUE",
+    "Lazy": "TRUE"
+  }
+]

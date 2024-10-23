@@ -1,0 +1,348 @@
+:root {
+  --background-color: #ebdddd;
+  --header-background-color: #d3d3d3;
+  --header-border-color: #000;
+  --header-text-color: #000000;
+  --sub-header-background-color: #c3c3c3;
+  --sub-header-border-color: #666;
+  --button-background-color: #5518e4;
+  --button-hover-background-color: #280072;
+  --button-hover-color: #ffffff;
+  --button-border-color: #000;
+  --button-text-color: #ffffff;
+  --button-active-transform: scale(0.95);
+  --remove-btn-background-color: #ff0000;
+  --remove-btn-color: #000000;
+  --cat-tree-background-color: #d3d3d3;
+  --cat-tree-border-color: #999999;
+  --item-table-background-color: #d3d3d3;
+  --item-table-border-color: #000000;
+  --quote-table-background-color: #d3d3d3;
+  --thead-background-color: #ebdddd;
+  --thead-color: #000000;
+  --odd-row-background-color: #c3c3c3;
+  --even-row-background-color: #b3b3b3;
+  --row-hover-background-color: #555555;
+  --row-hover-color: #ffffff;
+  --quote-header-background-color: #c3c3c3;
+  --quote-header-border-color: #a3a3a3;
+  --quote-totals-font-size: medium;
+  --quote-totals-font-weight: bolder;
+  --total-font-weight: lighter;
+  --box-shadow-color: rgba(0, 0, 0, 0.5);
+  --quote-totals-color: #000000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--background-color);
+}
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+ul,
+ol {
+  list-style: none;
+}
+#main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 0.5em;
+  border: 1px solid var(--header-border-color);
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+  overflow: hidden;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 0.5em;
+  background-color: var(--header-background-color);
+  border-bottom: 2px solid var(--header-border-color);
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+header span {
+  font-size: xx-large;
+  color: var(--header-text-color);
+  text-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+#sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  margin-bottom: 0.5em;
+  background-color: var(--sub-header-background-color);
+  border-bottom: 1px solid var(--sub-header-border-color);
+  text-align: left;
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+button,
+.add-btn,
+#clearQuoteTable {
+  padding: 5px 10px;
+  font-size: 14px;
+  font-weight: bold;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    transform 0.1s ease-in-out;
+  cursor: pointer;
+}
+button:hover,
+.add-btn:hover,
+.remove-btn:hover,
+#clearQuoteTable:hover,
+.qty-btn:hover {
+  background-color: var(--button-hover-background-color);
+  color: var(--button-hover-color);
+}
+button:active,
+.add-btn:active,
+.remove-btn:active,
+#clearQuoteTable:active,
+.qty-btn:active {
+  transform: var(--button-active-transform);
+}
+.add-btn {
+  padding: 2px 3px;
+  font-size: 10px;
+}
+.remove-btn,
+#clearQuoteTable {
+  padding: 2px 5px;
+  font-size: 14px;
+  background-color: var(--remove-btn-background-color);
+  color: var(--remove-btn-color);
+  font-weight: bold;
+}
+#sub-header button + button {
+  margin-left: 0.5em;
+}
+.qty-btn {
+  padding: 2px 3px;
+  font-size: 12px;
+  background-color: var(--button-background-color);
+  color: var(--button-text-color);
+  border: 1px solid var(--button-border-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out,
+    transform 0.1s ease-in-out;
+  cursor: pointer;
+}
+#item-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow-y: scroll;
+}
+#cat-tree-container {
+  width: 20%;
+  height: 100%;
+  border: 1px solid var(--cat-tree-border-color);
+  background-color: var(--cat-tree-background-color);
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+  flex: 0 0 auto;
+}
+#cat-tree {
+  background-color: var(--cat-tree-background-color);
+}
+#cat-tree tr:hover {
+  background-color: yellow;
+}
+#item-table {
+  width: 80%;
+  height: 100%;
+  padding: 2px;
+  position: sticky;
+  top: 0;
+  background-color: var(--item-table-background-color);
+  z-index: 10;
+}
+#item-table table {
+  width: 100%;
+}
+#quote-table-container {
+  position: relative;
+  width: 100%;
+  overflow-y: scroll;
+}
+#quote-table {
+  width: 100%;
+  padding: 2px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: var(--quote-table-background-color);
+}
+#quote-table table {
+  width: 100%;
+}
+#item-table,
+#quote-table {
+  padding: 2px;
+  background-color: var(--item-table-background-color);
+  border-left: 1px solid #ddd;
+  border: 1px solid var(--item-table-border-color);
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+  font-size: 12px;
+  flex: 1 1 auto;
+  overflow-y: auto;
+}
+#item-table table,
+#quote-table table {
+  border-collapse: collapse;
+}
+#item-table thead,
+#quote-table thead {
+  position: sticky;
+  top: -3px;
+  background-color: var(--thead-background-color);
+  color: var(--thead-color);
+  z-index: 1;
+}
+#item-table th,
+#item-table td,
+#quote-table th,
+#quote-table td {
+  text-align: center;
+  padding: 0.25em 0.5em;
+}
+#quote-table td,
+#item-table td {
+  color: var(--thead-color);
+}
+#item-table tbody tr:nth-child(odd),
+#quote-table tbody tr:nth-child(odd) {
+  background-color: var(--odd-row-background-color);
+}
+#item-table tbody tr:nth-child(even),
+#quote-table tbody tr:nth-child(even) {
+  background-color: var(--even-row-background-color);
+}
+#item-table tbody tr:hover,
+#quote-table tbody tr:hover,
+#quote-table tbody tr:hover td,
+#item-table tbody tr:hover td {
+  background-color: var(--row-hover-background-color);
+  color: var(--row-hover-color);
+}
+#closeQuoteList {
+  display: none;
+}
+#quoteListSection {
+  display: none;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+#quote-header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0.5em 0.5em 0.5em;
+  background-color: var(--quote-header-background-color);
+  border: 1px solid var(--quote-header-border-color);
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+#quoteListSection form {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+  width: 100%;
+  padding: 5px;
+  margin: 0 0.5em 0.5em 0.5em;
+  background-color: var(--quote-header-background-color);
+  border: 1px solid var(--quote-header-border-color);
+  box-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+.cust-data {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 63%;
+  height: 100%;
+}
+.cust-data .basic {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+}
+.cust-data .basic input {
+  width: 30em;
+  margin-right: 2em;
+}
+.cust-data .basic input:not(:last-child) {
+  margin-bottom: 0.25em;
+}
+.notes textarea {
+  font-weight: normal;
+}
+#quote-totals {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  width: 35%;
+  height: 100%;
+  padding: 0.25em;
+  font-size: var(--quote-totals-font-size);
+  font-weight: var(--quote-totals-font-weight);
+  color: var(--quote-totals-color);
+  text-shadow: 2px 2px 5px var(--box-shadow-color);
+}
+.totals-container {
+  width: 50%;
+  height: 100%;
+  text-align: left;
+}
+#totalItems,
+#totalQty,
+#totalWeight {
+  font-weight: var(--total-font-weight);
+}
+.piece-input {
+  width: 50px;
+}
