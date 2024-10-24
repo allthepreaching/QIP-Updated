@@ -64,7 +64,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Email the CSV file as an attachment
     $to = 'nickbetti@qualityindustrialproducts.com';
     $cc = $email;
-    $subject = 'QIP Quote Submission - ' + $companyOrName + ' - #' + $uniqueId;
+    $subject = 'QIP Quote Submission - ' . $companyOrName . ' - ' . $uniqueId;
     $message = 'Please find the attached CSV file with the form submission data. We will get back to you with pricing asap! Thank you so much!';
     $headers = 'From: sales@qualityindustrialproducts.com' . "\r\n" .
         'Cc: ' . $cc . "\r\n" .
